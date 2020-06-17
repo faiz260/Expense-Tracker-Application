@@ -1,25 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Header} from './Components/header'
+import {Balance} from './Components/Balance'
+import {IncomeExpense} from './Components/IncomeExpense'
+import {TransactionList} from './Components/TransactionList'
+import {AddTransaction} from './Components/AddTransaction'
 import './App.css';
+import Container from '@material-ui/core/Container';
+
+import {GlobalProvider} from './Context/GlobalState'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalProvider>
+      <Header/>
+      <Container maxWidth="sm">
+        <Balance/>
+        <IncomeExpense/>
+        <TransactionList/>
+        <AddTransaction/>
+      </Container>
+    </GlobalProvider>
   );
 }
 

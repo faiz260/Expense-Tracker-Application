@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+body{
+  height: 100%;
+  background-image: url(background5.jpg);
+  opacity: 0.8;
+  font-family: 'Roboto Condensed';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-content: center;
+  /* width: 400px; */
+  height: 80px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 15px 5px rgb(163, 163, 163);
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.negative {
+  border-right: 10px solid rgb(245, 50, 50);
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  padding: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  /* width: 510px; */
+  box-shadow: 5px 5px 15px 5px rgb(163, 163, 163);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.positive {
+  border-right: 10px solid  rgb(1, 211, 1);
+  border-bottom: 2px solid;
+  border-left: 2px solid;
+  border-top: 2px solid;
+  padding: 10px;
+  height: 30px;
+  margin-bottom: 10px;
+  /* width: 510px; */
+  box-shadow: 5px 5px 15px 5px rgb(163, 163, 163);
+}
+
+.digits1 {
+  color: red
+}
+.digits2 {
+  color: black;
+}
+
+.cards{
+  background-color: green;
+}
+
+
+.income {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.5px solid;
+  border-right: 10px solid;
+  border-bottom-color: rgb(14, 204, 14);
+  width: 510px;
+  color: rgb(1, 211, 1);
+  margin: 0;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.5px solid;
+  border-right: 10px solid;
+  border-bottom-color: red;
+  width: 510px;
+  color: rgb(245, 50, 50);
+  margin: 0;
+}
+
+
+.balance-head {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.5px solid;
+  /* border-right: 10px solid; */
+  border-bottom-color: purple;
+  width: 510px;
+  color: black;
+  /* box-shadow: 1px 1px 20px 5px rgb(163, 163, 163); */
+}
+
+.balance-amount{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.5px solid;
+  border-right: 10px solid;
+  border-bottom-color: purple;
+  width: 510px;
+  color: black;
+  /* box-shadow: 5px 5px 15px 5px rgb(163, 163, 163); */
+}
+
+.balance-div{
+  display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 15px 5px rgb(163, 163, 163);
+    margin-bottom: 20px;
+    height: 8 0px;
+}
+
+.transactionList {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.transactionList li{
+  background-color: #fff;
+  /* box-shadow: var(--box-shadow); */
+  box-shadow: 5px 5px 10px 2px rgb(163, 163, 163);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* .transactionList ul li span{
+  color: red;
+  float: right;
+  padding-left: 200px;
+} */
+
+/* .addTransaction h4 {
+  float: left;
+} */
+
+.income-expense{
+    display: flex;
+    justify-content: center;
+    box-shadow: 5px 5px 15px 5px rgb(163, 163, 163);
+    margin-bottom: 20px;
+    height: 90px;
+}
+
+.delButton{
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.delButton:hover{
+  opacity: 1;
+  background-color: tomato;
+  color: black;
+}
+
+.addTransaction input{
+  width: 200px;
+  height: 20px;
 }
