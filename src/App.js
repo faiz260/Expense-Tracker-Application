@@ -4,6 +4,7 @@ import {Balance} from './Components/Balance'
 import {IncomeExpense} from './Components/IncomeExpense'
 import {TransactionList} from './Components/TransactionList'
 import {AddTransaction} from './Components/AddTransaction'
+import {Footer} from './Components/footer'
 import './App.css';
 import Container from '@material-ui/core/Container';
 
@@ -18,6 +19,7 @@ function App() {
         <IncomeExpense/>
         <TransactionList/>
         <AddTransaction/>
+        <Footer/>
       </Container>
     </GlobalProvider>
   );
