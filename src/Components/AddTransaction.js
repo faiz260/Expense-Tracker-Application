@@ -1,7 +1,11 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../Context/GlobalState';
+import { useAlert } from 'react-alert'
+import M from "materialize-css";
 
 export const AddTransaction = () => {
+
+    const alert = useAlert();
 
     const {addTransaction} = useContext(GlobalContext);
 
@@ -10,18 +14,36 @@ export const AddTransaction = () => {
 
     const submit = (e) => {
        e.preventDefault();
-       
-       setAmount("");
-       setText("");
 
-        const newTransaction = {
-           id: Math.floor(Math.random() * 100000),
-           text,
-           amount: +amount
+       if(!text && !amount){
+           return(
+               alert.show("Fields required !! ")
+           )
+       }
+
+       if(!text){
+         return (
+             alert.show("Text Field Required !! ")
+         )
+       }
+       if (!amount) {
+           return (
+               alert.show("Amount Required !!")
+           )
+      }
+
+        const newTransaction = {  
+                id: Math.floor(Math.random() * 100000),
+                text,
+                amount: +amount         
        }
 
        addTransaction(newTransaction);
+
+       setAmount("");
+       setText("");
     }
+
 
     return (
         <div  className="addTransaction"  >
