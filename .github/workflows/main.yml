@@ -35,5 +35,5 @@ jobs:
     - name: Installing Surge
       run: npm install -g surge
     - name: Deploying using surge
-      run: surge ./build http://expense-tracker-faiz.surge.sh/ --token ${{SURGE_TOKEN}}
+      run: surge ./build http://expense-tracker-faiz.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
       
