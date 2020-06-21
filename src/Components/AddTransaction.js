@@ -1,7 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../Context/GlobalState';
 import { useAlert } from 'react-alert'
-import M from "materialize-css";
 
 export const AddTransaction = () => {
 

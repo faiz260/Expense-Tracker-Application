@@ -9,7 +9,6 @@
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "fontsource-roboto": "^2.1.4",
-    "materialize-css": "^1.0.0-rc.2",
     "react": "^16.13.1",
     "react-alert": "^7.0.1",
     "react-alert-template-mui": "^1.0.4",
