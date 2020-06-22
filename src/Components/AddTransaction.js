@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../Context/GlobalState';
+import Button from '@material-ui/core/Button';
 import { useAlert } from 'react-alert'
 
 export const AddTransaction = () => {
@@ -54,15 +55,19 @@ export const AddTransaction = () => {
                  type="text" 
                  value={text}  
                  onChange={(e)=>setText(e.target.value)}
-                  placeholder="Enter Text here" ></input>
+                 placeholder="Enter Text here" 
+                 ></input>
                 <h4>Amount</h4>
                 <p>(+ve for Income, -ve for expense)</p>
-                <input type="number" value={amount} onChange={(e)=>setAmount(e.target.value)}  
-                 placeholder="Enter Amount here" ></input>
+                <input type="number"
+                    value={amount}
+                    onChange={(e)=>setAmount(e.target.value)}  
+                    placeholder="Enter Amount here" 
+                    ></input>
                 <br/>
                 <br/>
-               {/* <Button variant="contained" >Add Transaction</Button  > */}
-               <button>Add Transaction</button>
+               {/* <Button variant="contained" onClick={submit}  >Add Transaction</Button  > */}
+               <button className="addButton" >Add Transaction</button>
             </form>
         </div>
     )
