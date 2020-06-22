@@ -49,7 +49,7 @@ export const AddTransaction = () => {
             <h3>Add Transaction</h3> 
             <hr/>
             <h4>Text</h4>
-            <form onSubmit={submit} >
+            <form onSubmit={submit} className="form"  >
                 <input
                  type="text" 
                  value={text}  
