@@ -1,6 +1,5 @@
 import React, {useState, useContext} from 'react';
 import { GlobalContext } from '../Context/GlobalState';
-import Button from '@material-ui/core/Button';
 import { useAlert } from 'react-alert'
 
 export const AddTransaction = () => {
@@ -66,7 +65,6 @@ export const AddTransaction = () => {
                     ></input>
                 <br/>
                 <br/>
-               {/* <Button variant="contained" onClick={submit}  >Add Transaction</Button  > */}
                <button className="addButton" >Add Transaction</button>
             </form>
         </div>
